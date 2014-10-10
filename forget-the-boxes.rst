@@ -56,17 +56,17 @@ What is immutable is the physical content of a tuple, which only holds object re
 
 __ https://docs.python.org/3/reference/datamodel.html#objects-values-and-types
 
-The other built-in immutable collection type in Python, ``frozenset``, does not suffer from the problem of being immutable yet potentially changing in value. That's because a ``frozenset`` (or a plain ``set``) may only hold references to hashable objects, and these by definition must be never change in value.
+The other built-in immutable collection type in Python, ``frozenset``, does not suffer from the problem of being immutable yet potentially changing in value. That's because a ``frozenset`` (or a plain ``set``) may only hold references to hashable objects, and these by definition must never change in value.
 
-A common use of tuples is as ``dict`` keys, and those must be hashable -- just as set elements. So, are tuples hashable or not? The right answer is: some are hashable, some are not. Tuples are always immutable, but the value of a tuple holding a mutable object may change, and such a tuple is not hashable. To be used as a ``dict`` key or set element, the tuple must be made only of hashable objects. Our objects ``tdum`` and ``tdee`` are unhashable because each holds a list reference.    
+A common use of tuples is as ``dict`` keys, and those must be hashable -- just as set elements. So, are tuples hashable or not? The right answer is: **some** tuples are hashable. Tuples are always immutable, but the value of a tuple holding a mutable object may change, and such a tuple is not hashable. To be used as a ``dict`` key or set element, the tuple must be made only of hashable objects. Our objects ``tdum`` and ``tdee`` are unhashable because each holds a list reference.    
 
 Now let's focus on the assignment statements at the heart of this whole exercise.
 
 Assignment in Python never copies values. It only copies references. So when I wrote ``skills = t_doom[1]`` I did not copy the list at ``t_doom[1]``, I only copied a reference to it, which I then used to change the list by doing ``skills.append('rap')``. 
 
-Prof. Stein spoke about assignment in a very deliberate way. For example, when talking about a seesaw object in a simulation, she would say: “Variable s is assigned to the seesaw”, but never “The seesaw is assigned to variable s”. With reference variables it makes much more sense to say that the variable is assigned to an object, and not the other way around. After all, the object is created before the assignment.
+Prof. Stein spoke about assignment in a very deliberate way. For example, when talking about a seesaw object in a simulation, she would say: “Variable ``s`` is assigned to the seesaw”, but never “The seesaw is assigned to variable ``s``”. With reference variables it makes much more sense to say that the variable is assigned to an object, and not the other way around. After all, the object is created before the assignment.
 
-In an assignment such as ``y = x * 10``, the right-hand side is evaluated first. The evaluation creates a new object or retrieves an existing one. Only after the object is constructed or retrieved, the label is assigned to it.
+In an assignment such as ``y = x * 10``, the right-hand side is evaluated first. This creates a new object or retrieves an existing one. Only after the object is constructed or retrieved, the name is assigned to it.
 
 Here is proof in code. First we create a ``Gizmo`` class, and an instance of it::
 
@@ -76,6 +76,8 @@ Here is proof in code. First we create a ``Gizmo`` class, and an instance of it:
     ...
     >>> x = Gizmo()
     Gizmo id: 4301489152
+
+Note that the `__init__` method displays the id of the object. This will be important in the next demonstration.
 
 Now let's try to create another instance and immediately try to perform an operation with it before binding a name to it::
 
@@ -87,7 +89,7 @@ Now let's try to create another instance and immediately try to perform an opera
     >>> 'y' in globals()
     False
 
-This snippet shows that the new object was instantiated (its id was 4301489432) but before the ``y`` name could be created, a ``TypeError`` aborted the whole assignment. The ``'y' in globals()`` check proves is no ``y`` global name.
+This snippet shows that the new object was instantiated (its id was 4301489432) but before the ``y`` name could be created, a ``TypeError`` aborted the assignment. The ``'y' in globals()`` check proves is no ``y`` global name.
 
 To wrap up assignment in Python: always read the right-hand side first. That’s where the object is created or retrieved. After that, the variable on the left is bound to the object, like a label stuck to it. Just forget about the boxes.
 
