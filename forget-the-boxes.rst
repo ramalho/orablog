@@ -52,7 +52,7 @@ A common use of tuples is as ``dict`` keys, and those must be hashable -- just a
 
 Now let's focus on the assignment statements at the heart of this whole exercise.
 
-Assignment in Python never copies values. It only copies references. So when I wrote ``skills = t_doom[1]`` I did not copy the list at ``t_doom[1]``, I only copied a reference to it, which I then used to change the list by doing ``skills.append('rap')``. A different assignment, ``skills_copy = t_doom[1][:]`` would first create a copy of the list at ``t_doom[1]`` by using the slice operator ``[:]``, and that copy would then be bound to the ``skills_copy`` name. Note that the assignment is not copying the list. The copy is made by the expression ``t_doom[1][:]``. The assingment merely binds a name to the newly created copy of the list. 
+Assignment in Python never copies values. It only copies references. So when I wrote ``skills = t_doom[1]`` I did not copy the list at ``t_doom[1]``, I only copied a reference to it, which I then used to change the list by doing ``skills.append('rap')``. 
 
 Prof. Stein spoke about assignment in a very deliberate way. For example, when talking about a seesaw object in a simulation, she would say: “Variable s is assigned to the seesaw”, but never “The seesaw is assigned to variable s”. With reference variables it makes much more sense to say that the variable is assigned to an object, and not the other way around. After all, the object is created before the assignment.
 
