@@ -11,6 +11,8 @@ In 1997 I took a summer course about Java at MIT. The professor, Lynn Andrea Ste
 
 Here is an example inspired by Lewis Carrol's *Through the Looking-Glass, and What Alice Found There*.
 
+.. image:: Tweedledum-Tweedledee_500x390.png
+
 Tweedledum and Tweedledee are identical twins. We'll represent them as tuples with the date of birth and a list of their skills::
 
     >>> tdum = ('1861-10-23', ['poetry', 'pretend-fight'])
