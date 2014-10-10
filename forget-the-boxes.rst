@@ -1,6 +1,10 @@
 Python tuples: immutable but potentially changing
 =================================================
 
+*Luciano Ramalho, author of `Fluent Python`__ *
+
+__ http://shop.oreilly.com/product/0636920032519.do
+
 Python tuples have a surprising trait: they are immutable, but their values may change. This may happen when a ``tuple`` holds a reference to any mutable type, such as a ``list``. If you need to explain this to a colleague who is new to Python, a good first step is to debunk the common belief that variables are like boxes where you put data.
 
 In 1997 I took a summer course about Java at MIT. The professor, Lynn Andrea Stein — an award-winning computer science educator — made the point that the usual “variables as boxes” metaphor actually hinders the understanding of reference variables in OO languages. Python variables are like reference variables in Java, so it’s better to think of them as labels attached to objects.
@@ -87,6 +91,6 @@ This snippet shows that the new object was instantiated (its id was 4301489432) 
 
 To wrap up assignment in Python: always read the right-hand side first. That’s where the object is created or retrieved. After that, the variable on the left is bound to the object, like a label stuck to it. Just forget about the boxes.
 
-    This post was inspired by chapter 8 of my `Fluent Python`__ book. That chapter, titled *Object references, mutability and recycling* also covers the semantics of function parameter passing, best practices for mutable handling, shallow copies and deep copies, and the concept of weak references -- among other topics.)
+    This post was inspired by chapter 8 of my `Fluent Python`__ book. That chapter, titled *Object references, mutability and recycling* also covers the semantics of function parameter passing, best practices for mutable handling, shallow copies and deep copies, and the concept of weak references -- among other topics.
 
 __ http://shop.oreilly.com/product/0636920032519.do
