@@ -95,7 +95,9 @@ Now let's try to create another instance and immediately try to perform an opera
 
 This snippet shows that the new object was instantiated (its id was ``4301489432``) but before the ``y`` name could be created, a ``TypeError`` aborted the assignment. The ``'y' in globals()`` check proves is no ``y`` global name.
 
-To wrap up assignment in Python: always read the right-hand side first. That’s where the object is created or retrieved. After that, the variable on the left is bound to the object, like a label stuck to it. Just forget about the boxes.
+To wrap up: always read the right-hand side of an assignment first. That’s where the object is created or retrieved. After that, the variable on the left is bound to the object, like a label stuck to it. Just forget about the boxes.
+
+As for tuples, better make sure they only hold immutable object references before trying to use them as dictionary keys or set elements. 
 
     This post was inspired by chapter 8 of my `Fluent Python`__ book. That chapter, titled *Object references, mutability and recycling* also covers the semantics of function parameter passing, best practices for mutable handling, shallow copies and deep copies, and the concept of weak references -- among other topics.
 
