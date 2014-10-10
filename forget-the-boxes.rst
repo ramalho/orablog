@@ -86,3 +86,5 @@ Now let's try to create another instance and immediately try to perform an opera
 This snippet shows that the new object was instantiated (its id was 4301489432) but before the ``y`` name could be created, a ``TypeError`` aborted the whole assignment. The ``'y' in globals()`` check proves is no ``y`` global name.
 
 To wrap up assignment in Python: always read the right-hand side first. That’s where the object is created or retrieved. After that, the variable on the left is bound to the object, like a label stuck to it. Just forget about the boxes.
+
+(This post was inspired by chapter 8 of my *Fluent Python* book. That chapter, titled *Object references, mutability and recycling* also covers shallow copies and deep copies, the semantics of function parameter passing and the concept of weak references, among other topics.)
