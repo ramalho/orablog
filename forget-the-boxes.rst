@@ -1,7 +1,7 @@
 Python tuples: immutable but potentially changing
 =================================================
 
-by *Luciano Ramalho, author of `Fluent Python`__ *
+by Luciano Ramalho, author of `Fluent Python`__
 
 __ http://shop.oreilly.com/product/0636920032519.do
 
