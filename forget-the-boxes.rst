@@ -28,9 +28,9 @@ Now, after the events witnessed by Alice, Tweedledum decided to become a rapper,
     >>> t_doom is tdum
     True
 
-So, ``t_doom`` and ``tdum`` are equal, but Alice would rightly complain that its silly to say that, because ``t_doom`` and ``tdum`` refer to the same person: ``t_doom is tdum``. The names ``t_doom`` and ``tdum`` are aliases. In fact, I like that the official Python docs often refer to variables as "names". That helps freeing our mind from the idea that they are like boxes. Because anyone who thinks of variables as boxes can't make sense of what comes next.
+So, ``t_doom`` and ``tdum`` are equal, but Alice would rightly complain that its silly to say that, because ``t_doom`` and ``tdum`` refer to the same person: ``t_doom is tdum``. The names ``t_doom`` and ``tdum`` are aliases. In fact, I like that the official Python docs often refer to variables as "names". That helps freeing our mind from the idea that they are like boxes. Variables are names we give to objects. Anyone who thinks of variables as boxes can't make sense of what comes next.
 
-After much practice, T-Doom is now skilled rapper. In code, this is what happened::
+After much practice, T-Doom is now a skilled rapper. In code, this is what happened::
 
     >>> skills = t_doom[1]
     >>> skills.append('rap')
@@ -39,7 +39,7 @@ After much practice, T-Doom is now skilled rapper. In code, this is what happene
     >>> tdum
     ('1861-10-23', ['poetry', 'pretend-fight', 'rap'])
 
-So, T-Doom aquired the ``'rap'`` skill, and so did Tweedledum -- of course, they are one and the same. If ``t_doom`` was a box holding a ``str`` and a ``list``, how can you explain that adding to that list also changes the data in the ``tdum`` box? But if you think of variables (or names) as labels, then it all makes perfect sense. The label analogy is much better because aliasing is explained simply as an object with two or more labels.
+T-Doom aquired the ``'rap'`` skill, and so did Tweedledum -- of course, they are one and the same. If ``t_doom`` was a box holding a ``str`` and a ``list``, how can you explain that appending to that list also changes the data in the ``tdum`` box? But if you think of variables (or names) as labels, then it all makes perfect sense. The label analogy is much better because aliasing is explained simply as an object with two or more labels. In the example, ``t_doom[1]`` and ``skills`` are two names given to the same list object, just as ``tdum`` and ``t_doom`` are two names given to the same tuple object.
 
 This exercise also shows that the value of a ``tuple`` may change. Now the twin brothers are no longer equal::
 
@@ -87,4 +87,6 @@ This snippet shows that the new object was instantiated (its id was 4301489432) 
 
 To wrap up assignment in Python: always read the right-hand side first. That’s where the object is created or retrieved. After that, the variable on the left is bound to the object, like a label stuck to it. Just forget about the boxes.
 
-(This post was inspired by chapter 8 of my *Fluent Python* book. That chapter, titled *Object references, mutability and recycling* also covers shallow copies and deep copies, the semantics of function parameter passing and the concept of weak references, among other topics.)
+.. admonition:: This post was inspired by chapter 8 of my `Fluent Python`__ book. That chapter, titled *Object references, mutability and recycling* also covers shallow copies and deep copies, the semantics of function parameter passing and the concept of weak references, among other topics.)
+
+__ http://shop.oreilly.com/product/0636920032519.do
