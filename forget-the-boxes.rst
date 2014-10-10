@@ -1,9 +1,11 @@
+Python tuples: immutable but potentially changing
+=================================================
 
-Python tuples have a surprising trait: they are immutable, but their values may change. This may happen when a tuple holds a reference to any mutable type, such as a list. If you need to explain this to a colleague who is new to Python, a good first step is to debunk the common belief that variables are like boxes where you put data.
+Python tuples have a surprising trait: they are immutable, but their values may change. This may happen when a ``tuple`` holds a reference to any mutable type, such as a ``list``. If you need to explain this to a colleague who is new to Python, a good first step is to debunk the common belief that variables are like boxes where you put data.
 
 In 1997 I took a summer course about Java at MIT. The professor, Lynn Andrea Stein — an award-winning computer science educator — made the point that the usual “variables as boxes” metaphor actually hinders the understanding of reference variables in OO languages. Python variables are like reference variables in Java, so it’s better to think of them as labels attached to objects.
 
-Here is an example inspired by Lewis Carrol's Through the Looking-Glass, and What Alice Found There.
+Here is an example inspired by Lewis Carrol's *Through the Looking-Glass, and What Alice Found There*.
 
 Tweedledum and Tweedledee are identical twins. We'll represent them as tuples with the date of birth and a list of their skills::
 
@@ -14,7 +16,9 @@ Tweedledum and Tweedledee are identical twins. We'll represent them as tuples wi
     >>> tdum is tdee
     False
 
-It's clear that ``tdum`` and ``tdee`` refer objects that are equal, but not to the same object. Now, after the events witnessed by Alice, Tweedledum decided to become a rapper, and adopted the stage name T-Doom. This is how we can express this in Python::
+It's clear that ``tdum`` and ``tdee`` refer to objects that are equal, but not to the same object. 
+
+Now, after the events witnessed by Alice, Tweedledum decided to become a rapper, and adopted the stage name T-Doom. This is how we can express this in Python::
 
     >>> t_doom = tdum
     >>> t_doom
@@ -35,16 +39,18 @@ After much practice, T-Doom is now skilled rapper. In code, this is what happene
     >>> tdum
     ('1861-10-23', ['poetry', 'pretend-fight', 'rap'])
 
-So, T-Doom aquired the ``'rap'`` skill, and so did Tweedledum. Of course, they are one and the same. If ``t_doom`` was a box holding a date and a list, how can you explain that adding to that list also changes the data in the ``tdum`` box? But if you think of variables (or names) as labels, then it all makes perfect sense. The label analogy is much better because aliasing is explained simply as an object with two or more labels.
+So, T-Doom aquired the ``'rap'`` skill, and so did Tweedledum -- of course, they are one and the same. If ``t_doom`` was a box holding a ``str`` and a ``list``, how can you explain that adding to that list also changes the data in the ``tdum`` box? But if you think of variables (or names) as labels, then it all makes perfect sense. The label analogy is much better because aliasing is explained simply as an object with two or more labels.
 
-This exercise also shows that the value of a tuple may change. Now the brothers are no longer equal::
+This exercise also shows that the value of a ``tuple`` may change. Now the twin brothers are no longer equal::
 
     >>> tdum == tdee
     False
 
-What is immutable is the physical content of a tuple, which only holds object references. What changed was the value of the list referenced by ``tdum[1]``, but the refenced object id is still the same. This highlights the difference between the concepts of identity and value, described in Python Language Reference Data Model chapter:
+What is immutable is the physical content of a tuple, which only holds object references. The value of the list referenced by ``tdum[1]`` changed, but the refenced object id is still the same. This highlights the difference between the concepts of identity and value, described in *Python Language Reference* `Data model`__ chapter:
 
     Every object has an identity, a type and a value. An object’s identity never changes once it has been created; you may think of it as the object’s address in memory. The ‘is‘ operator compares the identity of two objects; the id() function returns an integer representing its identity.
+
+__ https://docs.python.org/3/reference/datamodel.html#objects-values-and-types
 
 The other built-in immutable collection type in Python, ``frozenset``, does not suffer from the problem of being immutable yet potentially changing in value. That's because a ``frozenset`` (or a plain ``set``) may only hold references to hashable objects, and these by definition must be never change in value.
 
