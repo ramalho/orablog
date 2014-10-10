@@ -77,7 +77,7 @@ Here is proof in code. First we create a ``Gizmo`` class, and an instance of it:
     >>> x = Gizmo()
     Gizmo id: 4301489152
 
-Note that the `__init__` method displays the id of the object. This will be important in the next demonstration.
+Note that the ``__init__`` method displays the id of the object. This will be important in the next demonstration.
 
 Now let's try to create another instance and immediately try to perform an operation with it before binding a name to it::
 
@@ -89,7 +89,7 @@ Now let's try to create another instance and immediately try to perform an opera
     >>> 'y' in globals()
     False
 
-This snippet shows that the new object was instantiated (its id was 4301489432) but before the ``y`` name could be created, a ``TypeError`` aborted the assignment. The ``'y' in globals()`` check proves is no ``y`` global name.
+This snippet shows that the new object was instantiated (its id was ``4301489432``) but before the ``y`` name could be created, a ``TypeError`` aborted the assignment. The ``'y' in globals()`` check proves is no ``y`` global name.
 
 To wrap up assignment in Python: always read the right-hand side first. That’s where the object is created or retrieved. After that, the variable on the left is bound to the object, like a label stuck to it. Just forget about the boxes.
 
