@@ -34,7 +34,9 @@ Now, after the events witnessed by Alice, Tweedledum decided to become a rapper,
     >>> t_doom is tdum
     True
 
-So, ``t_doom`` and ``tdum`` are equal, but Alice would rightly complain that its silly to say that, because ``t_doom`` and ``tdum`` refer to the same person: ``t_doom is tdum``. The names ``t_doom`` and ``tdum`` are aliases. In fact, I like that the official Python docs often refer to variables as "names". That helps freeing our mind from the idea that they are like boxes. Variables are names we give to objects. Anyone who thinks of variables as boxes can't make sense of what comes next.
+So, ``t_doom`` and ``tdum`` are equal -- but Alice would rightly complain that it's silly to say that, because ``t_doom`` and ``tdum`` refer to the same person: ``t_doom is tdum``. 
+
+The names ``t_doom`` and ``tdum`` are aliases. I like that the official Python docs often refer to variables as "names". Variables are names we give to objects. Alternate names are aliases. That helps freeing our mind from the idea that they are like boxes. Anyone who thinks of variables as boxes can't make sense of what comes next.
 
 After much practice, T-Doom is now a skilled rapper. In code, this is what happened::
 
