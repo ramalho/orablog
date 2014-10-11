@@ -73,7 +73,7 @@ This highlights the difference between the concepts of identity and value, descr
 
     Every object has an identity, a type and a value. An object’s identity never changes once it has been created; you may think of it as the object’s address in memory. The ‘is’ operator compares the identity of two objects; the id() function returns an integer representing its identity.
 
-The other built-in immutable collection type in Python, ``frozenset``, does not suffer from the problem of being immutable yet potentially changing in value. That's because a ``frozenset`` (or a plain ``set``, for that matter) may only hold references to hashable objects, and such objects by definition must never change in value.
+The other built-in immutable collection type in Python, ``frozenset``, does not suffer from the problem of being immutable yet potentially changing in value. That's because a ``frozenset`` (or a plain ``set``, for that matter) may only hold references to hashable objects, and the value of hashable objects may naver change, by definition.
 
 Tuples are commonly used as ``dict`` keys, and those must be hashable — just as set elements. So, are tuples hashable or not? The right answer is: **some** tuples are hashable. The value of a tuple holding a mutable object may change, and such a tuple is not hashable. To be used as a ``dict`` key or set element, the tuple must be made only of hashable objects. Our tuples named ``dum`` and ``dee`` are unhashable because each contains a list reference, and lists are unhashable.    
 
