@@ -57,17 +57,18 @@ T-Doom acquired the ``'rap'`` skill, and so did Tweedledum -- of course, they ar
 
 The label analogy is much better because aliasing is explained simply as an object with two or more labels. In the example, ``t_doom[1]`` and ``skills`` are two names given to the same list object, just as ``dum`` and ``t_doom`` are two names given to the same tuple object.
 
-This exercise also shows that the value of a ``tuple`` may change. Now the twin brothers are no longer equal::
-
-    >>> dum == dee
-    False
-
 Below is an alternative depiction of the objects that represent Tweedledum. This picture emphasizes that a tuple holds references to objects.
 
 .. image:: diagrams/dum-skills-references.png
 
 
 What is immutable is the physical content of a tuple, consisting of the object references only. The value of the list referenced by ``dum[1]`` changed, but the referenced object id is still the same. A tuple has no way of preventing changes to the values of its items, which are independent objects and may be reached through references outside of the tuple, like the ``skills`` name we used earlier. 
+
+Now the twin brothers are no longer equal::
+
+    >>> dum == dee
+    False
+
 
 This highlights the difference between the concepts of identity and value, described in *Python Language Reference* `Data model`_ chapter:
 
@@ -112,7 +113,7 @@ To wrap up: always read the right-hand side of an assignment first. That’s whe
 
 As for tuples, better make sure they only hold immutable object references before trying to use them as dictionary keys or set elements. 
 
-    This post was inspired by chapter 8 of my `Fluent Python`_ book. That chapter, titled *Object references, mutability and recycling* also covers the semantics of function parameter passing, best practices for mutable parameter handling, shallow copies and deep copies, and the concept of weak references -- among other topics. The book focuses on Python 3 but most of its content also applies to Python 2.7, like everything in this post.
+    This post was based on chapter 8 of my `Fluent Python`_ book. That chapter, titled *Object references, mutability and recycling* also covers the semantics of function parameter passing, best practices for mutable parameter handling, shallow copies and deep copies, and the concept of weak references -- among other topics. The book focuses on Python 3 but most of its content also applies to Python 2.7, like everything in this post.
 
 .. _Fluent Python: http://shop.oreilly.com/product/0636920032519.do
 .. _Data Model: https://docs.python.org/3/reference/datamodel.html#objects-values-and-types
