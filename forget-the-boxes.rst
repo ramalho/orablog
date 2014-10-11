@@ -57,14 +57,17 @@ T-Doom acquired the ``'rap'`` skill, and so did Tweedledum -- of course, they ar
 
 The label analogy is much better because aliasing is explained simply as an object with two or more labels. In the example, ``t_doom[1]`` and ``skills`` are two names given to the same list object, just as ``dum`` and ``t_doom`` are two names given to the same tuple object.
 
-.. image:: diagrams/dum-skills-references.png
-
 This exercise also shows that the value of a ``tuple`` may change. Now the twin brothers are no longer equal::
 
     >>> dum == dee
     False
 
-What is immutable is the physical content of a tuple, consisting of object references only, not the objects themselves. The value of the list referenced by ``dum[1]`` changed, but the referenced object id is still the same. A tuple has no way of preventing changes to the values of its items, which are independent objects and may be reached through references outside of the tuple, like the ``skills`` name we used earlier. 
+Below is an alternative depiction of the objects that represent Tweedledum. This picture emphasizes that a tuple holds references to objects.
+
+.. image:: diagrams/dum-skills-references.png
+
+
+What is immutable is the physical content of a tuple, consisting of the object references only. The value of the list referenced by ``dum[1]`` changed, but the referenced object id is still the same. A tuple has no way of preventing changes to the values of its items, which are independent objects and may be reached through references outside of the tuple, like the ``skills`` name we used earlier. 
 
 This highlights the difference between the concepts of identity and value, described in *Python Language Reference* `Data model`_ chapter:
 
