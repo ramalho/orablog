@@ -13,7 +13,7 @@ Here is an example inspired by Lewis Carroll's *Through the Looking-Glass, and W
 
 .. image:: Tweedledum-Tweedledee_500x390.png
 
-Tweedledum and Tweedledee are identical twins. Quoting the book: "Alice knew which was which in a moment, because one of them had 'DUM' embroidered on his collar, and the other 'DEE.'"
+Tweedledum and Tweedledee are twins. From the book: "Alice knew which was which in a moment, because one of them had 'DUM' embroidered on his collar, and the other 'DEE.'"
 
 We'll represent them as tuples with the date of birth and a list of their skills::
 
@@ -23,6 +23,8 @@ We'll represent them as tuples with the date of birth and a list of their skills
     True
     >>> dum is dee
     False
+    >>> id(dum), id(dee)
+    (4313018120, 4312991048)
 
 It's clear that ``dum`` and ``dee`` refer to objects that are equal, but not to the same object. They have distinct identities.
 
