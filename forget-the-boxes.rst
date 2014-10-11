@@ -57,7 +57,7 @@ T-Doom acquired the ``'rap'`` skill, and so did Tweedledum — of course, they a
 
 The label analogy is much better because aliasing is explained simply as an object with two or more labels. In the example, ``t_doom[1]`` and ``skills`` are two names given to the same list object, just as ``dum`` and ``t_doom`` are two names given to the same tuple object.
 
-Below is an alternative depiction of the objects that represent Tweedledum. This picture emphasizes that a tuple holds references to objects.
+Below is an alternative depiction of the objects that represent Tweedledum. This figure emphasizes that a tuple holds references to objects.
 
 .. image:: diagrams/dum-skills-references.png
 
