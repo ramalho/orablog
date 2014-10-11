@@ -11,7 +11,7 @@ Here is an example inspired by Lewis Carroll's *Through the Looking-Glass, and W
 
 .. image:: Tweedledum-Tweedledee_500x390.png
 
-Tweedledum and Tweedledee are twins. From the book: "Alice knew which was which in a moment, because one of them had 'DUM' embroidered on his collar, and the other 'DEE.'"
+Tweedledum and Tweedledee are twins. From the book: “Alice knew which was which in a moment, because one of them had ‘DUM’ embroidered on his collar, and the other ‘DEE’.”
 
 .. image:: diagrams/dum-dee.png
 
@@ -42,7 +42,7 @@ So, ``t_doom`` and ``dum`` are equal -- but Alice might complain that it's fooli
 
 .. image:: diagrams/dum-t_doom-dee.png
 
-The names ``t_doom`` and ``dum`` are aliases. I like that the official Python docs often refer to variables as "names". Variables are names we give to objects. Alternate names are aliases. That helps freeing our mind from the idea that variables are like boxes. Anyone who thinks of variables as boxes can't make sense of what comes next.
+The names ``t_doom`` and ``dum`` are aliases. I like that the official Python docs often refer to variables as “names”. Variables are names we give to objects. Alternate names are aliases. That helps freeing our mind from the idea that variables are like boxes. Anyone who thinks of variables as boxes can't make sense of what comes next.
 
 After much practice, T-Doom is now a skilled rapper. In code, this is what happened::
 
@@ -72,7 +72,7 @@ Now the twin brothers are no longer equal::
 
 This highlights the difference between the concepts of identity and value, described in *Python Language Reference* `Data model`_ chapter:
 
-    Every object has an identity, a type and a value. An object’s identity never changes once it has been created; you may think of it as the object’s address in memory. The ‘is‘ operator compares the identity of two objects; the id() function returns an integer representing its identity.
+    Every object has an identity, a type and a value. An object’s identity never changes once it has been created; you may think of it as the object’s address in memory. The ‘is’ operator compares the identity of two objects; the id() function returns an integer representing its identity.
 
 The other built-in immutable collection type in Python, ``frozenset``, does not suffer from the problem of being immutable yet potentially changing in value. That's because a ``frozenset`` (or a plain ``set``, for that matter) may only hold references to hashable objects, and such objects by definition must never change in value.
 
