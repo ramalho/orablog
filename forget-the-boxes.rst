@@ -9,9 +9,7 @@ In 1997 I took a summer course about Java at MIT. The professor, Lynn Andrea Ste
 
 Here is an example inspired by Lewis Carroll's *Through the Looking-Glass, and What Alice Found There*.
 
-.. figure:: Tweedledum-Tweedledee_500x390.png
-
-    "They were standing under a tree, each with an arm round the other's neck, and Alice knew which was which in a moment, because one of them had 'DUM' embroidered on his collar, and the other 'DEE.'" (quote from Lewis Carroll's *Through the Looking-Glass, and What Alice Found There*, CHAPTER IV. Tweedledum And Tweedledee)
+.. image:: Tweedledum-Tweedledee_500x390.png
 
 Tweedledum and Tweedledee are twins. From the book: "Alice knew which was which in a moment, because one of them had 'DUM' embroidered on his collar, and the other 'DEE.'"
 
