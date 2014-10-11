@@ -38,7 +38,7 @@ Now, after the events witnessed by Alice, Tweedledum decided to become a rapper,
     >>> t_doom is dum
     True
 
-So, ``t_doom`` and ``dum`` are equal -- but Alice might complain that it's foolish to say that, because ``t_doom`` and ``dum`` refer to the same person: ``t_doom is dum``. 
+So, ``t_doom`` and ``dum`` are equal — but Alice might complain that it's foolish to say that, because ``t_doom`` and ``dum`` refer to the same person: ``t_doom is dum``. 
 
 .. image:: diagrams/dum-t_doom-dee.png
 
@@ -53,7 +53,7 @@ After much practice, T-Doom is now a skilled rapper. In code, this is what happe
     >>> dum
     ('1861-10-23', ['poetry', 'pretend-fight', 'rap'])
 
-T-Doom acquired the ``'rap'`` skill, and so did Tweedledum -- of course, they are one and the same. If ``t_doom`` was a box holding a ``str`` and a ``list``, how can you explain that appending to that list also changes the data in the ``dum`` box? But if you think of variables as labels, it makes perfect sense. 
+T-Doom acquired the ``'rap'`` skill, and so did Tweedledum — of course, they are one and the same. If ``t_doom`` was a box holding a ``str`` and a ``list``, how can you explain that appending to that list also changes the data in the ``dum`` box? But if you think of variables as labels, it makes perfect sense. 
 
 The label analogy is much better because aliasing is explained simply as an object with two or more labels. In the example, ``t_doom[1]`` and ``skills`` are two names given to the same list object, just as ``dum`` and ``t_doom`` are two names given to the same tuple object.
 
@@ -76,7 +76,7 @@ This highlights the difference between the concepts of identity and value, descr
 
 The other built-in immutable collection type in Python, ``frozenset``, does not suffer from the problem of being immutable yet potentially changing in value. That's because a ``frozenset`` (or a plain ``set``, for that matter) may only hold references to hashable objects, and such objects by definition must never change in value.
 
-Tuples are commonly used as ``dict`` keys, and those must be hashable -- just as set elements. So, are tuples hashable or not? The right answer is: **some** tuples are hashable. The value of a tuple holding a mutable object may change, and such a tuple is not hashable. To be used as a ``dict`` key or set element, the tuple must be made only of hashable objects. Our tuples named ``dum`` and ``dee`` are unhashable because each contains a list reference, and lists are unhashable.    
+Tuples are commonly used as ``dict`` keys, and those must be hashable — just as set elements. So, are tuples hashable or not? The right answer is: **some** tuples are hashable. The value of a tuple holding a mutable object may change, and such a tuple is not hashable. To be used as a ``dict`` key or set element, the tuple must be made only of hashable objects. Our tuples named ``dum`` and ``dee`` are unhashable because each contains a list reference, and lists are unhashable.    
 
 Now let's focus on the assignment statements at the heart of this whole exercise.
 
@@ -113,7 +113,7 @@ To wrap up: always read the right-hand side of an assignment first. That’s whe
 
 As for tuples, better make sure they only hold immutable object references before trying to use them as dictionary keys or set elements. 
 
-    This post was based on chapter 8 of my `Fluent Python`_ book. That chapter, titled *Object references, mutability and recycling* also covers the semantics of function parameter passing, best practices for mutable parameter handling, shallow copies and deep copies, and the concept of weak references -- among other topics. The book focuses on Python 3 but most of its content also applies to Python 2.7, like everything in this post.
+    This post was based on chapter 8 of my `Fluent Python`_ book. That chapter, titled *Object references, mutability and recycling* also covers the semantics of function parameter passing, best practices for mutable parameter handling, shallow copies and deep copies, and the concept of weak references — among other topics. The book focuses on Python 3 but most of its content also applies to Python 2.7, like everything in this post.
 
 .. _Fluent Python: http://shop.oreilly.com/product/0636920032519.do
 .. _Data Model: https://docs.python.org/3/reference/datamodel.html#objects-values-and-types
