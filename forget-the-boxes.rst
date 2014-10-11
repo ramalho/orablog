@@ -13,6 +13,8 @@ Here is an example inspired by Lewis Carroll's *Through the Looking-Glass, and W
 
 Tweedledum and Tweedledee are twins. From the book: "Alice knew which was which in a moment, because one of them had 'DUM' embroidered on his collar, and the other 'DEE.'"
 
+.. image:: diagrams/dum-dee.png
+
 We'll represent them as tuples with the date of birth and a list of their skills::
 
     >>> dum = ('1861-10-23', ['poetry', 'pretend-fight'])
@@ -36,7 +38,9 @@ Now, after the events witnessed by Alice, Tweedledum decided to become a rapper,
     >>> t_doom is dum
     True
 
-So, ``t_doom`` and ``dum`` are equal -- but Alice would rightly complain that it's foolish to say that, because ``t_doom`` and ``dum`` refer to the same person: ``t_doom is dum``. 
+So, ``t_doom`` and ``dum`` are equal -- but Alice might complain that it's foolish to say that, because ``t_doom`` and ``dum`` refer to the same person: ``t_doom is dum``. 
+
+.. image:: diagrams/dum-t_doom-dee.png
 
 The names ``t_doom`` and ``dum`` are aliases. I like that the official Python docs often refer to variables as "names". Variables are names we give to objects. Alternate names are aliases. That helps freeing our mind from the idea that variables are like boxes. Anyone who thinks of variables as boxes can't make sense of what comes next.
 
@@ -56,7 +60,7 @@ This exercise also shows that the value of a ``tuple`` may change. Now the twin 
     >>> dum == dee
     False
 
-What is immutable is the physical content of a tuple, consisting of object references only, not the objects themselves. The value of the list referenced by ``dum[1]`` changed, but the referenced object id is still the same. A tuple has no way of preventing changes in its items, which are independent and can be reached through references outside of the tuple, like the ``skills`` name we used earlier. 
+What is immutable is the physical content of a tuple, consisting of object references only, not the objects themselves. The value of the list referenced by ``dum[1]`` changed, but the referenced object id is still the same. A tuple has no way of preventing changes to the values of its items, which are independent objects and may be reached through references outside of the tuple, like the ``skills`` name we used earlier. 
 
 This highlights the difference between the concepts of identity and value, described in *Python Language Reference* `Data model`_ chapter:
 
@@ -64,7 +68,7 @@ This highlights the difference between the concepts of identity and value, descr
 
 The other built-in immutable collection type in Python, ``frozenset``, does not suffer from the problem of being immutable yet potentially changing in value. That's because a ``frozenset`` (or a plain ``set``, for that matter) may only hold references to hashable objects, and such objects by definition must never change in value.
 
-A common use of tuples is as ``dict`` keys, and those must be hashable -- just as set elements. So, are tuples hashable or not? The right answer is: **some** tuples are hashable. Tuples are always immutable, but the value of a tuple holding a mutable object may change, and such a tuple is not hashable. To be used as a ``dict`` key or set element, the tuple must be made only of hashable objects. Our tuples named ``dum`` and ``dee`` are unhashable because each contains a list reference.    
+Tuples are commonly used as ``dict`` keys, and those must be hashable -- just as set elements. So, are tuples hashable or not? The right answer is: **some** tuples are hashable. The value of a tuple holding a mutable object may change, and such a tuple is not hashable. To be used as a ``dict`` key or set element, the tuple must be made only of hashable objects. Our tuples named ``dum`` and ``dee`` are unhashable because each contains a list reference, and lists are unhashable.    
 
 Now let's focus on the assignment statements at the heart of this whole exercise.
 
