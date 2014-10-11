@@ -3,7 +3,7 @@ Python tuples: immutable but potentially changing
 
 by Luciano Ramalho, author of `Fluent Python`_
 
-Python tuples have a surprising trait: they are immutable, but their values may change. This may happen when a ``tuple`` holds a reference to any mutable type, such as a ``list``. If you need to explain this to a colleague who is new to Python, a good first step is to debunk the common belief that variables are like boxes where you put data.
+Python tuples have a surprising trait: they are immutable, but their values may change. This may happen when a ``tuple`` holds a reference to any mutable type, such as a ``list``. If you need to explain this to a colleague who is new to Python, a good first step is to debunk the common notion that variables are like boxes where you store data.
 
 In 1997 I took a summer course about Java at MIT. The professor, Lynn Andrea Stein — an award-winning computer science educator — made the point that the usual “variables as boxes” metaphor actually hinders the understanding of reference variables in OO languages. Python variables are like reference variables in Java, so it’s better to think of them as labels attached to objects.
 
@@ -53,14 +53,13 @@ After much practice, T-Doom is now a skilled rapper. In code, this is what happe
     >>> dum
     ('1861-10-23', ['poetry', 'pretend-fight', 'rap'])
 
-T-Doom acquired the ``'rap'`` skill, and so did Tweedledum — of course, they are one and the same. If ``t_doom`` was a box holding a ``str`` and a ``list``, how can you explain that appending to that list also changes the data in the ``dum`` box? But if you think of variables as labels, it makes perfect sense. 
+T-Doom acquired the ``'rap'`` skill, and so did Tweedledum — of course, they are one and the same. If ``t_doom`` was a box containing a ``str`` and a ``list``, how could you explain that appending to the list in ``t_doom`` also changes the list in the ``dum`` box? But if you think of variables as labels, it makes perfect sense. 
 
 The label analogy is much better because aliasing is explained simply as an object with two or more labels. In the example, ``t_doom[1]`` and ``skills`` are two names given to the same list object, just as ``dum`` and ``t_doom`` are two names given to the same tuple object.
 
 Below is an alternative depiction of the objects that represent Tweedledum. This figure emphasizes that a tuple holds references to objects.
 
 .. image:: diagrams/dum-skills-references.png
-
 
 What is immutable is the physical content of a tuple, consisting of the object references only. The value of the list referenced by ``dum[1]`` changed, but the referenced object id is still the same. A tuple has no way of preventing changes to the values of its items, which are independent objects and may be reached through references outside of the tuple, like the ``skills`` name we used earlier. 
 
