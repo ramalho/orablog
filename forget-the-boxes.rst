@@ -9,34 +9,36 @@ Python tuples have a surprising trait: they are immutable, but their values may 
 
 In 1997 I took a summer course about Java at MIT. The professor, Lynn Andrea Stein — an award-winning computer science educator — made the point that the usual “variables as boxes” metaphor actually hinders the understanding of reference variables in OO languages. Python variables are like reference variables in Java, so it’s better to think of them as labels attached to objects.
 
-Here is an example inspired by Lewis Carrol's *Through the Looking-Glass, and What Alice Found There*.
+Here is an example inspired by Lewis Carroll's *Through the Looking-Glass, and What Alice Found There*.
 
 .. image:: Tweedledum-Tweedledee_500x390.png
 
-Tweedledum and Tweedledee are identical twins. We'll represent them as tuples with the date of birth and a list of their skills::
+Tweedledum and Tweedledee are identical twins. Quoting the book: "Alice knew which was which in a moment, because one of them had 'DUM' embroidered on his collar, and the other 'DEE.'"
 
-    >>> tdum = ('1861-10-23', ['poetry', 'pretend-fight'])
-    >>> tdee = ('1861-10-23', ['poetry', 'pretend-fight'])
-    >>> tdum == tdee
+We'll represent them as tuples with the date of birth and a list of their skills::
+
+    >>> dum = ('1861-10-23', ['poetry', 'pretend-fight'])
+    >>> dee = ('1861-10-23', ['poetry', 'pretend-fight'])
+    >>> dum == dee
     True
-    >>> tdum is tdee
+    >>> dum is dee
     False
 
-It's clear that ``tdum`` and ``tdee`` refer to objects that are equal, but not to the same object. 
+It's clear that ``dum`` and ``dee`` refer to objects that are equal, but not to the same object. They have distinct identities.
 
-Now, after the events witnessed by Alice, Tweedledum decided to become a rapper, and adopted the stage name T-Doom. This is how we can express this in Python::
+Now, after the events witnessed by Alice, Tweedledum decided to become a rapper, adopting the stage name T-Doom. This is how we can express this in Python::
 
-    >>> t_doom = tdum
+    >>> t_doom = dum
     >>> t_doom
     ('1861-10-23', ['poetry', 'pretend-fight'])
-    >>> t_doom == tdum
+    >>> t_doom == dum
     True
-    >>> t_doom is tdum
+    >>> t_doom is dum
     True
 
-So, ``t_doom`` and ``tdum`` are equal -- but Alice would rightly complain that it's silly to say that, because ``t_doom`` and ``tdum`` refer to the same person: ``t_doom is tdum``. 
+So, ``t_doom`` and ``dum`` are equal -- but Alice would rightly complain that it's silly to say that, because ``t_doom`` and ``dum`` refer to the same person: ``t_doom is dum``. 
 
-The names ``t_doom`` and ``tdum`` are aliases. I like that the official Python docs often refer to variables as "names". Variables are names we give to objects. Alternate names are aliases. That helps freeing our mind from the idea that variables are like boxes. Anyone who thinks of variables as boxes can't make sense of what comes next.
+The names ``t_doom`` and ``dum`` are aliases. I like that the official Python docs often refer to variables as "names". Variables are names we give to objects. Alternate names are aliases. That helps freeing our mind from the idea that variables are like boxes. Anyone who thinks of variables as boxes can't make sense of what comes next.
 
 After much practice, T-Doom is now a skilled rapper. In code, this is what happened::
 
@@ -44,17 +46,17 @@ After much practice, T-Doom is now a skilled rapper. In code, this is what happe
     >>> skills.append('rap')
     >>> t_doom
     ('1861-10-23', ['poetry', 'pretend-fight', 'rap'])
-    >>> tdum
+    >>> dum
     ('1861-10-23', ['poetry', 'pretend-fight', 'rap'])
 
-T-Doom aquired the ``'rap'`` skill, and so did Tweedledum -- of course, they are one and the same. If ``t_doom`` was a box holding a ``str`` and a ``list``, how can you explain that appending to that list also changes the data in the ``tdum`` box? But if you think of variables (or names) as labels, then it all makes perfect sense. The label analogy is much better because aliasing is explained simply as an object with two or more labels. In the example, ``t_doom[1]`` and ``skills`` are two names given to the same list object, just as ``tdum`` and ``t_doom`` are two names given to the same tuple object.
+T-Doom aquired the ``'rap'`` skill, and so did Tweedledum -- of course, they are one and the same. If ``t_doom`` was a box holding a ``str`` and a ``list``, how can you explain that appending to that list also changes the data in the ``dum`` box? But if you think of variables (or names) as labels, then it all makes perfect sense. The label analogy is much better because aliasing is explained simply as an object with two or more labels. In the example, ``t_doom[1]`` and ``skills`` are two names given to the same list object, just as ``dum`` and ``t_doom`` are two names given to the same tuple object.
 
 This exercise also shows that the value of a ``tuple`` may change. Now the twin brothers are no longer equal::
 
-    >>> tdum == tdee
+    >>> dum == dee
     False
 
-What is immutable is the physical content of a tuple, which only holds object references. The value of the list referenced by ``tdum[1]`` changed, but the refenced object id is still the same. This highlights the difference between the concepts of identity and value, described in *Python Language Reference* `Data model`__ chapter:
+What is immutable is the physical content of a tuple, which consists of object references only, not the objects themselves. The value of the list referenced by ``dum[1]`` changed, but the refenced object id is still the same. This highlights the difference between the concepts of identity and value, described in *Python Language Reference* `Data model`__ chapter:
 
     Every object has an identity, a type and a value. An object’s identity never changes once it has been created; you may think of it as the object’s address in memory. The ‘is‘ operator compares the identity of two objects; the id() function returns an integer representing its identity.
 
@@ -62,7 +64,7 @@ __ https://docs.python.org/3/reference/datamodel.html#objects-values-and-types
 
 The other built-in immutable collection type in Python, ``frozenset``, does not suffer from the problem of being immutable yet potentially changing in value. That's because a ``frozenset`` (or a plain ``set``) may only hold references to hashable objects, and these by definition must never change in value.
 
-A common use of tuples is as ``dict`` keys, and those must be hashable -- just as set elements. So, are tuples hashable or not? The right answer is: **some** tuples are hashable. Tuples are always immutable, but the value of a tuple holding a mutable object may change, and such a tuple is not hashable. To be used as a ``dict`` key or set element, the tuple must be made only of hashable objects. Our tuples named ``tdum`` and ``tdee`` are unhashable because each holds a list reference.    
+A common use of tuples is as ``dict`` keys, and those must be hashable -- just as set elements. So, are tuples hashable or not? The right answer is: **some** tuples are hashable. Tuples are always immutable, but the value of a tuple holding a mutable object may change, and such a tuple is not hashable. To be used as a ``dict`` key or set element, the tuple must be made only of hashable objects. Our tuples named ``dum`` and ``dee`` are unhashable because each holds a list reference.    
 
 Now let's focus on the assignment statements at the heart of this whole exercise.
 
@@ -99,6 +101,6 @@ To wrap up: always read the right-hand side of an assignment first. That’s whe
 
 As for tuples, better make sure they only hold immutable object references before trying to use them as dictionary keys or set elements. 
 
-    This post was inspired by chapter 8 of my `Fluent Python`__ book. That chapter, titled *Object references, mutability and recycling* also covers the semantics of function parameter passing, best practices for mutable parameter handling, shallow copies and deep copies, and the concept of weak references -- among other topics.
+    This post was inspired by chapter 8 of my `Fluent Python`__ book. That chapter, titled *Object references, mutability and recycling* also covers the semantics of function parameter passing, best practices for mutable parameter handling, shallow copies and deep copies, and the concept of weak references -- among other topics. The book focuses on Python 3 but most of its content also applies to Python 2, like everything in this post.
 
 __ http://shop.oreilly.com/product/0636920032519.do
