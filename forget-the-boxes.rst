@@ -61,17 +61,18 @@ Below is an alternative depiction of the objects that represent Tweedledum. This
 
 .. image:: diagrams/dum-skills-references.png
 
-What is immutable is the physical content of a tuple, consisting of the object references only. The value of the list referenced by ``dum[1]`` changed, but the referenced object id is still the same. A tuple has no way of preventing changes to the values of its items, which are independent objects and may be reached through references outside of the tuple, like the ``skills`` name we used earlier. 
-
-Now the twin brothers are no longer equal::
-
-    >>> dum == dee
-    False
-
+What is immutable is the physical content of a tuple, consisting of the object references only. The value of the list referenced by ``dum[1]`` changed, but the referenced object id is still the same. A tuple has no way of preventing changes to the values of its items, which are independent objects and may be reached through references outside of the tuple, like the ``skills`` name we used earlier. Lists and other mutable objects inside tuples may change, but their ids will always be the same.
 
 This highlights the difference between the concepts of identity and value, described in *Python Language Reference* `Data model`_ chapter:
 
     Every object has an identity, a type and a value. An object’s identity never changes once it has been created; you may think of it as the object’s address in memory. The ‘is’ operator compares the identity of two objects; the id() function returns an integer representing its identity.
+
+After ``dum`` became a rapper, the twin brothers are no longer equal::
+
+    >>> dum == dee
+    False
+
+We have two tuples that were created equal, but now they are different.
 
 The other built-in immutable collection type in Python, ``frozenset``, does not suffer from the problem of being immutable yet potentially changing in value. That's because a ``frozenset`` (or a plain ``set``, for that matter) may only hold references to hashable objects, and the value of hashable objects may naver change, by definition.
 
@@ -81,7 +82,7 @@ Now let's focus on the assignment statements at the heart of this whole exercise
 
 Assignment in Python never copies values. It only copies references. So when I wrote ``skills = t_doom[1]`` I did not copy the list at ``t_doom[1]``, I only copied a reference to it, which I then used to change the list by doing ``skills.append('rap')``. 
 
-Prof. Stein spoke about assignment in a very deliberate way. For example, when talking about a seesaw object in a simulation, she would say: “Variable ``s`` is assigned to the seesaw”, but never “The seesaw is assigned to variable ``s``”. With reference variables it makes much more sense to say that the variable is assigned to an object, and not the other way around. After all, the object is created before the assignment.
+Back at MIT, Prof. Stein spoke about assignment in a very deliberate way. For example, when talking about a seesaw object in a simulation, she would say: “Variable ``s`` is assigned to the seesaw”, but never “The seesaw is assigned to variable ``s``”. With reference variables it makes much more sense to say that the variable is assigned to an object, and not the other way around. After all, the object is created before the assignment.
 
 In an assignment such as ``y = x * 10``, the right-hand side is evaluated first. This creates a new object or retrieves an existing one. Only after the object is constructed or retrieved, the name is assigned to it.
 
@@ -106,7 +107,7 @@ Now let's instantiate another ``Gizmo`` and immediately try to perform an operat
     >>> 'y' in globals()
     False
 
-This snippet shows that the new object was instantiated (its id was ``4328764360``) but before the ``y`` name could be created, a ``TypeError`` aborted the assignment. The ``'y' in globals()`` check proves is no ``y`` global name.
+This snippet shows that the new object was instantiated (its id was ``4328764360``) but before the ``y`` name could be created, a ``TypeError`` aborted the assignment. The ``'y' in globals()`` check proves there is no ``y`` global name.
 
 To wrap up: always read the right-hand side of an assignment first. That’s where the object is created or retrieved. After that, the name on the left is bound to the object, like a label stuck to it. Just forget about the boxes.
 
