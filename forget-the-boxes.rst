@@ -111,7 +111,7 @@ This snippet shows that the new object was instantiated (its id was ``4328764360
 
 To wrap up: always read the right-hand side of an assignment first. That’s where the object is created or retrieved. After that, the name on the left is bound to the object, like a label stuck to it. Just forget about the boxes.
 
-As for tuples, better make sure they only hold references to immutable objects before trying to use them as dictionary keys or put them in sets.
+As for tuples, make sure they only hold references to immutable objects before trying to use them as dictionary keys or put them in sets.
 
     This post was based on chapter 8 of my `Fluent Python`_ book. That chapter, titled *Object references, mutability and recycling* also covers the semantics of function parameter passing, best practices for mutable parameter handling, shallow copies and deep copies, and the concept of weak references — among other topics. The book focuses on Python 3 but most of its content also applies to Python 2.7, like everything in this post.
 
