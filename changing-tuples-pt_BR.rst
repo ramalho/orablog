@@ -15,7 +15,7 @@ Tweedledum e Tweedledee eram gêmeos. Do livro: “Alice soube no mesmo instante
 
 .. image:: diagrams/dum-dee.png
 
-We'll represent them as tuples with the date of birth and a list of their skills::
+Vamos representa-los como tuplas contendo a data de nascimento e uma lista de suas habilidades::
 
     >>> dum = ('1861-10-23', ['poetry', 'pretend-fight'])
     >>> dee = ('1861-10-23', ['poetry', 'pretend-fight'])
