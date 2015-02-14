@@ -76,7 +76,7 @@ Após ``dum`` tornar-se um rapper, os irmãos gêmeos não são mais iguais::
     >>> dum == dee
     False
 
-We have two tuples that were created equal, but now they are different.
+Nós temos duas tuplas que foram criadas iguais, mas agora elas são diferentes.
 
 The other built-in immutable collection type in Python, ``frozenset``, does not suffer from the problem of being immutable yet potentially changing in value. That's because a ``frozenset`` (or a plain ``set``, for that matter) may only hold references to hashable objects, and the value of hashable objects may naver change, by definition.
 
