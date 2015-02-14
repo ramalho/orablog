@@ -53,7 +53,7 @@ Depois de muito praticar, T-Doom é agora um rapper experiente. Codificando, foi
     >>> dum
     ('1861-10-23', ['poesia', 'nervosinho 'rap'])
 
-T-Doom acquired the ``'rap'`` skill, and so did Tweedledum — of course, they are one and the same. If ``t_doom`` was a box containing a ``str`` and a ``list``, how could you explain that appending to the list in ``t_doom`` also changes the list in the ``dum`` box? However, it makes perfect sense if you see variables as labels.
+T-Doom conquistou a habilidade ``rap``, e também Tweedledum — óbvio, pois eles são um e o mesmo. Se ``t_doom`` fosse uma caixa contendo dados do tipo ``str`` e ``list``, como você poderia explicar a inclusão à lista ``t_doom`` também altera a lista na caixa ``dum``?  Contudo, é perfeitamente plausível se você entende variáveis como etiquetas.
 
 The label analogy is much better because aliasing is explained simply as an object with two or more labels. In the example, ``t_doom[1]`` and ``skills`` are two names given to the same list object, just as ``dum`` and ``t_doom`` are two names given to the same tuple object.
 
