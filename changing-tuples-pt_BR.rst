@@ -38,7 +38,7 @@ Agora, depois dos eventos testemunhados por Alice, Tweedledum decidiu ser um rap
     >>> t_doom is dum
     True
 
-So, ``t_doom`` and ``dum`` are equal — but Alice might complain that it's foolish to say that, because ``t_doom`` and ``dum`` refer to the same person: ``t_doom is dum``. 
+Então, ``t_doom`` e ``dum`` são iguais - mas Alice pode entender ser tolice dizer isso, porque ``t_doom`` e ``dum`` referem-se à mesma pessoa: ``t_doom is dom``.
 
 .. image:: diagrams/dum-t_doom-dee.png
 
