@@ -113,7 +113,7 @@ Agora vamos instanciar outra ``Gizmo`` e imediatamente tentar executar uma opera
 
 Este trecho mostra que o novo objeto foi instanciado (seu identificador é ``4328764360``) mas antes que o nome ``y`` possa ser criado, uma exceção ``TypeError`` abortou a atribuição. A verificação ``'y' in globals()`` prova que não existe o nome global ``y``.
 
-To wrap up: always read the right-hand side of an assignment first. That’s where the object is created or retrieved. After that, the name on the left is bound to the object, like a label stuck to it. Just forget about the boxes.
+Para fechar: sempre leia primeiro o lado direito de uma atribuição. Aqui o objeto é computado ou retornado. Depois disso, o nome no lado esquerdo é atrelado ao objeto, como uma etiqueta afixada nele. Apenas esqueça sobre as caixas.
 
 As for tuples, make sure they only hold references to immutable objects before trying to use them as dictionary keys or put them in sets.
 
