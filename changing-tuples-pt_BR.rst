@@ -57,7 +57,7 @@ T-Doom conquistou a habilidade ``rap``, e também Tweedledum — óbvio, pois el
 
 A analogia da etiqueta é muito melhor porque apelidos são explicados mais facilmente como um objeto com duas ou mais etiquetas. No exemplo, ``t_doom[1]`` e ``skills`` são dois nomes dados ao mesmo objeto da lista, da mesma forma que ``dum`` e ``t_doom`` são dois nomes dados ao mesmo objeto da tupla.
 
-Below is an alternative depiction of the objects that represent Tweedledum. This figure emphasizes that a tuple holds references to objects.
+Abaixo está uma ilustração alternativa dos objetos que representam Tweedledum. Esta figura enfatiza o fato de a tupla possuir referências a objetos.
 
 .. image:: diagrams/dum-skills-references.png
 
