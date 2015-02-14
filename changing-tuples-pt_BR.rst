@@ -7,7 +7,7 @@ Tuplas em Python têm uma característica surpreendente: elas são imutáveis, m
 
 Em 1997 participei de um curso de verão sobre Java no MIT. O professor, Lynn Andrea Stein - um premiado educador em ciência da computação - enfatizou que a habitual metáfora de "variáveis como caixas" acaba atrapalhando o entendimento sobre variáveis de referência em linguagens OO. Variáveis em Python são como variáveis de referência em Java, portanto é melhor pensar nelas como etiquetas afixadas em objetos.
 
-Here is an example inspired by Lewis Carroll's *Through the Looking-Glass, and What Alice Found There*.
+Eis um exemplo inspirado no livro *Alice Através do Espelho e O Que Ela Encontrou Por Lá*, de Lewis Carroll.
 
 .. image:: Tweedledum-Tweedledee_500x390.png
 
