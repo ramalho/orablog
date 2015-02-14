@@ -99,7 +99,7 @@ Aqui está o código demonstrando. Primeiro nós criamos uma classe ``Gizmo``, e
     >>> x = Gizmo()
     Gizmo id: 4328764080
 
-Note that the ``__init__`` method displays the id of the object just created. This will be important in the next demonstration.
+Observe que o método ``__init__`` mostra o identificador do objeto tão logo criado. Isso será importante na próxima demonstração.
 
 Now let's instantiate another ``Gizmo`` and immediately try to perform an operation with it before binding a name to the result::
 
