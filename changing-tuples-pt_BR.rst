@@ -65,7 +65,7 @@ Imutável é o conteúdo físico de uma tupla, que contém apenas referências a
 
 Isso enfatiza a diferença entre os conceitos de identidade e valor, descritos em *Python Language Reference*, no capítulo `Data model`_::
 
-    Every object has an identity, a type and a value. An object’s identity never changes once it has been created; you may think of it as the object’s address in memory. The ‘is’ operator compares the identity of two objects; the id() function returns an integer representing its identity.
+    Cada objeto tem um identificador, um tipo e um valor. A identificação de um objeto nunca muda, uma vez que tenha sido criado; você pode pensar como se fosse o endereço do objeto na memória. O operador ‘is’ compara o identificador de dois objetos; a função id() retorna um inteiro representando o seu identificador.
 
 After ``dum`` became a rapper, the twin brothers are no longer equal::
 
