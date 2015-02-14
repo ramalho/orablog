@@ -49,9 +49,9 @@ Depois de muito praticar, T-Doom é agora um rapper experiente. Codificando, foi
     >>> skills = t_doom[1]
     >>> skills.append('rap')
     >>> t_doom
-    ('1861-10-23', ['poetry', 'pretend-fight', 'rap'])
+    ('1861-10-23', ['poesia', 'nervosinho 'rap'])
     >>> dum
-    ('1861-10-23', ['poetry', 'pretend-fight', 'rap'])
+    ('1861-10-23', ['poesia', 'nervosinho 'rap'])
 
 T-Doom acquired the ``'rap'`` skill, and so did Tweedledum — of course, they are one and the same. If ``t_doom`` was a box containing a ``str`` and a ``list``, how could you explain that appending to the list in ``t_doom`` also changes the list in the ``dum`` box? However, it makes perfect sense if you see variables as labels.
 
