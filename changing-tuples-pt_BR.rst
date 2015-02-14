@@ -26,7 +26,7 @@ Vamos representa-los como tuplas contendo a data de nascimento e uma lista de su
     >>> id(dum), id(dee)
     (4313018120, 4312991048)
 
-It's clear that ``dum`` and ``dee`` refer to objects that are equal, but not to the same object. They have distinct identities.
+É claro que ``dum`` e ``dee`` referem-se a objetos que são iguais, mas que não são o mesmo objeto. Eles tem identificadores diferentes.
 
 Now, after the events witnessed by Alice, Tweedledum decided to become a rapper, adopting the stage name T-Doom. This is how we can express this in Python::
 
