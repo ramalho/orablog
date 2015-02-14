@@ -3,7 +3,7 @@ Tuplas em Python: são imutáveis mas seu valor pode mudar
 
 Por Luciano Ramalho, autor de `Fluent Python`_
 
-Tuplas em Python têm uma característica surpreendente: elas são imutáveis, mas seus valores podem mudar. Isso pode acontecer quando uma ``tupla`` contém uma referência para qualquer objeyo mutável, como uma ``lista``. Se você precisar explicar isso a um colega iniciando com Python, um bom começo é destruir o senso comum sobre variáveis serem como caixas em que armazenamos dados.
+Tuplas em Python têm uma característica surpreendente: elas são imutáveis, mas seus valores podem mudar. Isso pode acontecer quando uma ``tupla`` contém uma referência para qualquer objeto mutável, como uma ``lista``. Se você precisar explicar isso a um colega iniciando com Python, um bom começo é destruir o senso comum sobre variáveis serem como caixas em que armazenamos dados.
 
 Em 1997 participei de um curso de verão sobre Java no MIT. O professor, Lynn Andrea Stein - um premiado educador em ciência da computação - enfatizou que a habitual metáfora de "variáveis como caixas" acaba atrapalhando o entendimento sobre variáveis de referência em linguagens OO. Variáveis em Python são como variáveis de referência em Java, portanto é melhor pensar nelas como etiquetas afixadas em objetos.
 
@@ -15,7 +15,7 @@ Tweedledum e Tweedledee eram gêmeos. Do livro: “Alice soube no mesmo instante
 
 .. image:: diagrams/dum-dee.png
 
-Vamos representa-los como tuplas contendo a data de nascimento e uma lista de suas habilidades::
+Vamos representá-los como tuplas contendo a data de nascimento e uma lista de suas habilidades::
 
     >>> dum = ('1861-10-23', ['poesia', 'nervosinho'])
     >>> dee = ('1861-10-23', ['poesia', 'nervosinho'])
@@ -28,7 +28,7 @@ Vamos representa-los como tuplas contendo a data de nascimento e uma lista de su
 
 É claro que ``dum`` e ``dee`` referem-se a objetos que são iguais, mas que não são o mesmo objeto. Eles tem identificadores diferentes.
 
-Agora, depois dos eventos testemunhados por Alice, Tweedledum decidiu ser um rapper, adotanto o nome artístico T-Doom. Podemos expressar isso em Python dessa forma::
+Agora, depois dos eventos testemunhados por Alice, Tweedledum decidiu ser um rapper, adotando o nome artístico T-Doom. Podemos expressar isso em Python dessa forma::
 
     >>> t_doom = dum
     >>> t_doom
@@ -42,7 +42,7 @@ Então, ``t_doom`` e ``dum`` são iguais - mas Alice pode entender ser tolice di
 
 .. image:: diagrams/dum-t_doom-dee.png
 
-Os nomes ``t_doom`` e ``dum`` são apelidos. Agrada-me ver que nos documentos oficiais do Python muitas vezes referem-se a variáveis como “nomes“. Variáveis são nomes que damos a objetos. Nomes alternativos são apelidos. Isso ajuda a limpar da nossa mente a ideia de que variáveis são como caixas. Qualquer um que pense variáveis sendo caixas, não pode enteder o que vem a seguir.
+Os nomes ``t_doom`` e ``dum`` são apelidos. Agrada-me ver que nos documentos oficiais do Python muitas vezes referem-se a variáveis como “nomes“. Variáveis são nomes que damos a objetos. Nomes alternativos são apelidos. Isso ajuda a limpar da nossa mente a ideia de que variáveis são como caixas. Qualquer um que pense variáveis sendo caixas, não pode entender o que vem a seguir.
 
 Depois de muito praticar, T-Doom é agora um rapper experiente. Codificando, foi isso o que aconteceu:
 
@@ -60,6 +60,8 @@ A analogia da etiqueta é muito melhor porque apelidos são explicados mais faci
 Abaixo está uma ilustração alternativa dos objetos que representam Tweedledum. Esta figura enfatiza o fato de a tupla possuir referências a objetos.
 
 .. image:: diagrams/dum-skills-references.png
+
+Imutável é o conteúdo físico de uma tupla, que contém apenas referências a objetos. O valor da lista referenciado por ``dum[1]`` mudou, mas o identificador do objeto referenciado permanece o mesmo. Uma tupla não tem meios de prevenir mudanças nos valores de seus itens que são objetos independentes e podem ser encontrados através de referencias fora da tupla, como o nome ``skills`` que nós usamos anteriormente. Listas e outros objetos imutáveis dentro de tuplas podem ser alterados, mas seus identificadores serão sempre os mesmos.
 
 What is immutable is the physical content of a tuple, consisting of the object references only. The value of the list referenced by ``dum[1]`` changed, but the referenced object id is still the same. A tuple has no way of preventing changes to the values of its items, which are independent objects and may be reached through references outside of the tuple, like the ``skills`` name we used earlier. Lists and other mutable objects inside tuples may change, but their ids will always be the same.
 
