@@ -101,7 +101,7 @@ Aqui está o código demonstrando. Primeiro nós criamos uma classe ``Gizmo``, e
 
 Observe que o método ``__init__`` mostra o identificador do objeto tão logo criado. Isso será importante na próxima demonstração.
 
-Now let's instantiate another ``Gizmo`` and immediately try to perform an operation with it before binding a name to the result::
+Agora vamos instanciar outra ``Gizmo`` e imediatamente tentar executar uma operação com ela antes de atribuir um nome ao resultado::
 
     >>> y = Gizmo() * 10
     Gizmo id: 4328764360
