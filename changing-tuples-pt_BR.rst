@@ -44,7 +44,7 @@ Então, ``t_doom`` e ``dum`` são iguais - mas Alice pode entender ser tolice di
 
 Os nomes ``t_doom`` e ``dum`` são apelidos. Agrada-me ver que nos documentos oficiais do Python muitas vezes referem-se a variáveis como “nomes“. Variáveis são nomes que damos a objetos. Nomes alternativos são apelidos. Isso ajuda a limpar da nossa mente a ideia de que variáveis são como caixas. Qualquer um que pense variáveis sendo caixas, não pode enteder o que vem a seguir.
 
-After much practice, T-Doom is now a skilled rapper. In code, this is what happened::
+Depois de muito praticar, T-Doom é agora um rapper experiente. Codificando, foi isso o que aconteceu:
 
     >>> skills = t_doom[1]
     >>> skills.append('rap')
