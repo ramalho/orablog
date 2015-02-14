@@ -38,7 +38,7 @@ Agora, depois dos eventos testemunhados por Alice, Tweedledum decidiu ser um rap
     >>> t_doom is dum
     True
 
-Então, ``t_doom`` e ``dum`` são iguais - mas Alice pode entender ser tolice dizer isso, porque ``t_doom`` e ``dum`` referem-se à mesma pessoa: ``t_doom is dom``.
+Então, ``t_doom`` e ``dum`` são iguais - mas Alice pode entender ser tolice dizer isso, porque ``t_doom`` e ``dum`` referem-se à mesma pessoa: ``t_doom is dum``.
 
 .. image:: diagrams/dum-t_doom-dee.png
 
@@ -61,7 +61,7 @@ Abaixo está uma ilustração alternativa dos objetos que representam Tweedledum
 
 .. image:: diagrams/dum-skills-references.png
 
-Imutável é o conteúdo físico de uma tupla, que contém apenas referências a objetos. O valor da lista referenciado por ``dum[1]`` mudou, mas o identificador do objeto referenciado permanece o mesmo. Uma tupla não tem meios de prevenir mudanças nos valores de seus itens, que são objetos independentes e podem ser encontrados através de referencias fora da tupla, como o nome ``skills`` que nós usamos anteriormente. Listas e outros objetos imutáveis dentro de tuplas podem ser alterados, mas seus identificadores serão sempre os mesmos.
+Imutável é o conteúdo físico de uma tupla, que contém apenas referências a objetos. O valor da lista referenciado por ``dum[1]`` mudou, mas o identificador do objeto referenciado permanece o mesmo. Uma tupla não tem meios de prevenir mudanças nos valores de seus itens, que são objetos independentes e podem ser encontrados através de referências fora da tupla, como o nome ``skills`` que nós usamos anteriormente. Listas e outros objetos imutáveis dentro de tuplas podem ser alterados, mas seus identificadores serão sempre os mesmos.
 
 Isso enfatiza a diferença entre os conceitos de identidade e valor, descritos em *Python Language Reference*, no capítulo `Data model`_::
 
