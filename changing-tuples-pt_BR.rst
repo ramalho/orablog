@@ -3,7 +3,7 @@ Tuplas em Python: são imutáveis mas seu valor pode mudar
 
 Por Luciano Ramalho, autor de `Fluent Python`_
 
-Python tuples have a surprising trait: they are immutable, but their values may change. This may happen when a ``tuple`` holds a reference to any mutable object, such as a ``list``. If you need to explain this to a colleague who is new to Python, a good first step is to debunk the common notion that variables are like boxes where you store data.
+Tuplas em Python têm uma característica surpreendente: elas são imutáveis, mas seus valores podem mudar. Isso pode acontecer quando uma ``tupla`` contém uma referência para qualquer objeyo mutável, como uma ``lista``. Se você precisar explicar isso a um colega iniciando com Python, um bom começo é destruir o senso comum sobre variáveis serem como caixas em que armazenamos dados.
 
 In 1997 I took a summer course about Java at MIT. The professor, Lynn Andrea Stein — an award-winning computer science educator — made the point that the usual “variables as boxes” metaphor actually hinders the understanding of reference variables in OO languages. Python variables are like reference variables in Java, so it’s better to think of them as labels attached to objects.
 
