@@ -88,7 +88,7 @@ A atribuição em Python nunca copia valores. Ela apenas copia referências. Ent
 
 Voltando ao MIT, o Prof. Stein falou sobre atribuição de uma forma muito direcionada. Por exemplo, quando falando sobre um objeto gangorra em uma simulação, ele dizia: “A variável ``s`` é atribuída à gangorra“, mas nunca “A gangorra é atribuída à variável ``s`` “. Como variáveis de referência ele tornou muito mais coerente dizer que a variável é atribuída ao objeto, e não outra forma. Afinal, o objeto é criado antes da atribuição.
 
-In an assignment such as ``y = x * 10``, the right-hand side is evaluated first. This creates a new object or retrieves an existing one. Only after the object is constructed or retrieved, the name is assigned to it.
+Em uma atribuição como ``y = x * 10``, o lado direito é computado primeiro. Isto cria um novo objeto ou retorna um já existente. Somente após o objeto ser computado ou retornado, o nome é atribuído a ele.
 
 Here is proof in code. First we create a ``Gizmo`` class, and an instance of it::
 
