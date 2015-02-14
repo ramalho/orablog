@@ -11,7 +11,7 @@ Eis um exemplo inspirado no livro *Alice Através do Espelho e O Que Ela Encontr
 
 .. image:: Tweedledum-Tweedledee_500x390.png
 
-Tweedledum and Tweedledee are twins. From the book: “Alice knew which was which in a moment, because one of them had ‘DUM’ embroidered on his collar, and the other ‘DEE’.”
+Tweedledum e Tweedledee eram gêmeos. Do livro: “Alice soube no mesmo instante qual era qual porque um deles tinha 'DUM' bordado na gola e o outro, 'DEE'”.
 
 .. image:: diagrams/dum-dee.png
 
