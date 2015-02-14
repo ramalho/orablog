@@ -42,7 +42,7 @@ Então, ``t_doom`` e ``dum`` são iguais - mas Alice pode entender ser tolice di
 
 .. image:: diagrams/dum-t_doom-dee.png
 
-The names ``t_doom`` and ``dum`` are aliases. I like that the official Python docs often refer to variables as “names”. Variables are names we give to objects. Alternate names are aliases. That helps freeing our mind from the idea that variables are like boxes. Anyone who thinks of variables as boxes can't make sense of what comes next.
+Os nomes ``t_doom`` e ``dum`` são apelidos. Agrada-me ver que nos documentos oficiais do Python muitas vezes referem-se a variáveis como “nomes“. Variáveis são nomes que damos a objetos. Nomes alternativos são apelidos. Isso ajuda a limpar da nossa mente a ideia de que variáveis são como caixas. Qualquer um que pense variáveis sendo caixas, não pode enteder o que vem a seguir.
 
 After much practice, T-Doom is now a skilled rapper. In code, this is what happened::
 
