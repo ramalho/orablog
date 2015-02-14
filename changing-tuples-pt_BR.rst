@@ -80,8 +80,7 @@ Nós temos duas tuplas que foram criadas iguais, mas agora elas são diferentes.
 
 O outro tipo interno de coleção imutável em Python, ``frozenset``, não sofre do problema de ser imutável mas com possibilidade de mudar seus valores. Isso ocorre porque um ``frozenset`` (ou um ``set`` simples, nesse sentido) pode apenas conter referências a objetos ``hashable`` (objetos que podem ser usados como chave em um dicionário), cujo valor, por definição, nunca pode mudar.
 
-
-Tuples are commonly used as ``dict`` keys, and those must be hashable — just as set elements. So, are tuples hashable or not? The right answer is: **some** tuples are hashable. The value of a tuple holding a mutable object may change, and such a tuple is not hashable. To be used as a ``dict`` key or set element, the tuple must be made only of hashable objects. Our tuples named ``dum`` and ``dee`` are unhashable because each contains a list reference, and lists are unhashable.    
+Tuplas são comumente usadas como chaves para objetos ``dict``, e precisam ser ``hashable`` - assim como os elementos de um conjunto. Então, as tuplas são ``hashables`` ou não? A resposta certa é **algumas** tuplas são. O valor de uma tupla contendo um objeto mutável pode mudar, e como uma tupla, não é ``hashable``. Para ser usada como chave para um objeto ``dict`` ou elemento de um objeto ``set``, a tupla precisa ser constituída apenas de objetos ``hashable``. Nossas tuplas de nome ``dum`` e ``dee`` não são ``hashable`` porque cada elemento contem uma referência a uma lista, e listas não são ``hashable``.
 
 Now let's focus on the assignment statements at the heart of this whole exercise.
 
