@@ -84,7 +84,7 @@ Tuplas são comumente usadas como chaves para objetos ``dict``, e precisam ser `
 
 Agora vamos nos concentrar nos comandos de atribuição que são o coração de todo esse exercício.
 
-Assignment in Python never copies values. It only copies references. So when I wrote ``skills = t_doom[1]`` I did not copy the list at ``t_doom[1]``, I only copied a reference to it, which I then used to change the list by doing ``skills.append('rap')``. 
+A atribuição em Python nunca copia valores. Ela apenas copia referências. Então quando eu escrevi ``skills = t_doom[1]`` eu não copiei a lista referenciada por ``t_doom[1]``, eu apenas copiei a referência a ela, que eu então usei para alterar a lista executando ``skills.append('rap')``.
 
 Back at MIT, Prof. Stein spoke about assignment in a very deliberate way. For example, when talking about a seesaw object in a simulation, she would say: “Variable ``s`` is assigned to the seesaw”, but never “The seesaw is assigned to variable ``s``”. With reference variables it makes much more sense to say that the variable is assigned to an object, and not the other way around. After all, the object is created before the assignment.
 
