@@ -28,7 +28,7 @@ Vamos representa-los como tuplas contendo a data de nascimento e uma lista de su
 
 É claro que ``dum`` e ``dee`` referem-se a objetos que são iguais, mas que não são o mesmo objeto. Eles tem identificadores diferentes.
 
-Now, after the events witnessed by Alice, Tweedledum decided to become a rapper, adopting the stage name T-Doom. This is how we can express this in Python::
+Agora, depois dos eventos testemunhados por Alice, Tweedledum decidiu ser um rapper, adotanto o nome artístico T-Doom. Podemos expressar isso em Python dessa forma::
 
     >>> t_doom = dum
     >>> t_doom
