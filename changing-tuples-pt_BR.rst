@@ -71,7 +71,7 @@ Isso enfatiza a diferença entre os conceitos de identidade e valor, descritos e
     identificador de dois objetos; a função id() retorna um inteiro
     representando o seu identificador.
 
-After ``dum`` became a rapper, the twin brothers are no longer equal::
+Após ``dum`` tornar-se um rapper, os irmãos gêmeos não são mais iguais::
 
     >>> dum == dee
     False
