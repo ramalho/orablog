@@ -55,7 +55,7 @@ Depois de muito praticar, T-Doom é agora um rapper experiente. Codificando, foi
 
 T-Doom conquistou a habilidade ``rap``, e também Tweedledum — óbvio, pois eles são um e o mesmo. Se ``t_doom`` fosse uma caixa contendo dados do tipo ``str`` e ``list``, como você poderia explicar a inclusão à lista ``t_doom`` também altera a lista na caixa ``dum``?  Contudo, é perfeitamente plausível se você entende variáveis como etiquetas.
 
-The label analogy is much better because aliasing is explained simply as an object with two or more labels. In the example, ``t_doom[1]`` and ``skills`` are two names given to the same list object, just as ``dum`` and ``t_doom`` are two names given to the same tuple object.
+A analogia da etiqueta é muito melhor porque apelidos são explicados mais facilmente como um objeto com duas ou mais etiquetas. No exemplo, ``t_doom[1]`` e ``skills`` são dois nomes dados ao mesmo objeto da lista, da mesma forma que ``dum`` e ``t_doom`` são dois nomes dados ao mesmo objeto da tupla.
 
 Below is an alternative depiction of the objects that represent Tweedledum. This figure emphasizes that a tuple holds references to objects.
 
