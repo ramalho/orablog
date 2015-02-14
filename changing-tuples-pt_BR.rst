@@ -90,7 +90,7 @@ Voltando ao MIT, o Prof. Stein falou sobre atribuição de uma forma muito direc
 
 Em uma atribuição como ``y = x * 10``, o lado direito é computado primeiro. Isto cria um novo objeto ou retorna um já existente. Somente após o objeto ser computado ou retornado, o nome é atribuído a ele.
 
-Here is proof in code. First we create a ``Gizmo`` class, and an instance of it::
+Aqui está o código demonstrando. Primeiro nós criamos uma classe ``Gizmo``, e uma instância dela::
 
     >>> class Gizmo:
     ...     def __init__(self):
