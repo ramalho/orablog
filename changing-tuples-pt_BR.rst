@@ -78,7 +78,8 @@ Após ``dum`` tornar-se um rapper, os irmãos gêmeos não são mais iguais::
 
 Nós temos duas tuplas que foram criadas iguais, mas agora elas são diferentes.
 
-The other built-in immutable collection type in Python, ``frozenset``, does not suffer from the problem of being immutable yet potentially changing in value. That's because a ``frozenset`` (or a plain ``set``, for that matter) may only hold references to hashable objects, and the value of hashable objects may naver change, by definition.
+O outro tipo interno de coleção imutável em Python, ``frozenset``, não sofre do problema de ser imutável mas com possibilidade de mudar seus valores. Isso ocorre porque um ``frozenset`` (ou um ``set`` simples, nesse sentido) pode apenas conter referências a objetos ``hashable`` (objetos que podem ser usados como chave em um dicionário), cujo valor, por definição, nunca pode mudar.
+
 
 Tuples are commonly used as ``dict`` keys, and those must be hashable — just as set elements. So, are tuples hashable or not? The right answer is: **some** tuples are hashable. The value of a tuple holding a mutable object may change, and such a tuple is not hashable. To be used as a ``dict`` key or set element, the tuple must be made only of hashable objects. Our tuples named ``dum`` and ``dee`` are unhashable because each contains a list reference, and lists are unhashable.    
 
