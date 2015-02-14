@@ -115,7 +115,7 @@ Este trecho mostra que o novo objeto foi instanciado (seu identificador é ``432
 
 Para fechar: sempre leia primeiro o lado direito de uma atribuição. Aqui o objeto é computado ou retornado. Depois disso, o nome no lado esquerdo é atrelado ao objeto, como uma etiqueta afixada nele. Apenas esqueça sobre as caixas.
 
-As for tuples, make sure they only hold references to immutable objects before trying to use them as dictionary keys or put them in sets.
+Em relação a tuplas, certifique-se que elas apenas contenham referências a objetos imutáveis antes de tentar usá-las como chave em dicionários ou as coloque em objetos ``set``.
 
     This post was based on chapter 8 of my `Fluent Python`_ book. That chapter, titled *Object references, mutability and recycling* also covers the semantics of function parameter passing, best practices for mutable parameter handling, shallow copies and deep copies, and the concept of weak references — among other topics. The book focuses on Python 3 but most of its content also applies to Python 2.7, like everything in this post.
 
