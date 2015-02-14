@@ -86,7 +86,7 @@ Agora vamos nos concentrar nos comandos de atribuição que são o coração de 
 
 A atribuição em Python nunca copia valores. Ela apenas copia referências. Então quando eu escrevi ``skills = t_doom[1]`` eu não copiei a lista referenciada por ``t_doom[1]``, eu apenas copiei a referência a ela, que eu então usei para alterar a lista executando ``skills.append('rap')``.
 
-Back at MIT, Prof. Stein spoke about assignment in a very deliberate way. For example, when talking about a seesaw object in a simulation, she would say: “Variable ``s`` is assigned to the seesaw”, but never “The seesaw is assigned to variable ``s``”. With reference variables it makes much more sense to say that the variable is assigned to an object, and not the other way around. After all, the object is created before the assignment.
+Voltando ao MIT, o Prof. Stein falou sobre atribuição de uma forma muito direcionada. Por exemplo, quando falando sobre um objeto gangorra em uma simulação, ele dizia: “A variável ``s`` é atribuída à gangorra“, mas nunca “A gangorra é atribuída à variável ``s`` “. Como variáveis de referência ele tornou muito mais coerente dizer que a variável é atribuída ao objeto, e não outra forma. Afinal, o objeto é criado antes da atribuição.
 
 In an assignment such as ``y = x * 10``, the right-hand side is evaluated first. This creates a new object or retrieves an existing one. Only after the object is constructed or retrieved, the name is assigned to it.
 
