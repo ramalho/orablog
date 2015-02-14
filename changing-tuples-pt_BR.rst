@@ -82,7 +82,7 @@ O outro tipo interno de coleção imutável em Python, ``frozenset``, não sofre
 
 Tuplas são comumente usadas como chaves para objetos ``dict``, e precisam ser ``hashable`` - assim como os elementos de um conjunto. Então, as tuplas são ``hashables`` ou não? A resposta certa é **algumas** tuplas são. O valor de uma tupla contendo um objeto mutável pode mudar, e como uma tupla, não é ``hashable``. Para ser usada como chave para um objeto ``dict`` ou elemento de um objeto ``set``, a tupla precisa ser constituída apenas de objetos ``hashable``. Nossas tuplas de nome ``dum`` e ``dee`` não são ``hashable`` porque cada elemento contem uma referência a uma lista, e listas não são ``hashable``.
 
-Now let's focus on the assignment statements at the heart of this whole exercise.
+Agora vamos nos concentrar nos comandos de atribuição que são o coração de todo esse exercício.
 
 Assignment in Python never copies values. It only copies references. So when I wrote ``skills = t_doom[1]`` I did not copy the list at ``t_doom[1]``, I only copied a reference to it, which I then used to change the list by doing ``skills.append('rap')``. 
 
