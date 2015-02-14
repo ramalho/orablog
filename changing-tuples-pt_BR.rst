@@ -111,7 +111,7 @@ Agora vamos instanciar outra ``Gizmo`` e imediatamente tentar executar uma opera
     >>> 'y' in globals()
     False
 
-This snippet shows that the new object was instantiated (its id was ``4328764360``) but before the ``y`` name could be created, a ``TypeError`` aborted the assignment. The ``'y' in globals()`` check proves there is no ``y`` global name.
+Este trecho mostra que o novo objeto foi instanciado (seu identificador é ``4328764360``) mas antes que o nome ``y`` possa ser criado, uma exceção ``TypeError`` abortou a atribuição. A verificação ``'y' in globals()`` prova que não existe o nome global ``y``.
 
 To wrap up: always read the right-hand side of an assignment first. That’s where the object is created or retrieved. After that, the name on the left is bound to the object, like a label stuck to it. Just forget about the boxes.
 
