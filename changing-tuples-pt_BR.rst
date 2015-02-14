@@ -32,7 +32,7 @@ Agora, depois dos eventos testemunhados por Alice, Tweedledum decidiu ser um rap
 
     >>> t_doom = dum
     >>> t_doom
-    ('1861-10-23', ['poetry', 'pretend-fight'])
+    ('1861-10-23', ['poesia', 'nervosinho'])
     >>> t_doom == dum
     True
     >>> t_doom is dum
