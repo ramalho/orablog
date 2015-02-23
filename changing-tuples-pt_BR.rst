@@ -42,7 +42,7 @@ Então, ``t_doom`` e ``dum`` são iguais - mas Alice acharia tolice dizer isso, 
 
 .. image:: diagrams/dum-t_doom-dee.png
 
-Os nomes ``t_doom`` e ``dum`` são apelidos. O termo em inglês "alias" significa exatamente apelido. Gosto que os documentos oficiais do Python muitas vezes referem-se a variáveis como “nomes“. Variáveis são nomes que damos a objetos. Nomes alternativos são apelidos. Isso ajuda a limpar da nossa mente a ideia de que variáveis são como caixas. Qualquer um que pense variáveis sendo caixas, não pode entender o que vem a seguir.
+Os nomes ``t_doom`` e ``dum`` são apelidos. O termo em inglês "alias" significa exatamente apelido. Gosto que os documentos oficiais do Python muitas vezes referem-se a variáveis como “nomes“. Variáveis são nomes que damos a objetos. Nomes alternativos são apelidos. Isso ajuda a tirar da nossa mente a ideia de que variáveis são como caixas. Qualquer um que pense em variáveis como caixas não consegue explicar o que vem a seguir.
 
 Depois de muito praticar, T-Doom agora é um rapper experiente. Codificando, foi isso o que aconteceu::
 
