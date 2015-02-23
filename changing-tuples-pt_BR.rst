@@ -63,7 +63,7 @@ Abaixo está uma ilustração alternativa dos objetos que representam Tweedledum
 
 O que é imutável é o conteúdo físico de uma tupla, que armazena apenas referências a objetos. O valor da lista referenciado por ``dum[1]`` mudou, mas a identidade da lista referenciada pela tupla permanece a mesma. Uma tupla não tem meios de prevenir mudanças nos valores de seus itens, que são objetos independentes e podem ser encontrados através de referências fora da tupla, como o nome ``skills`` que nós usamos anteriormente. Listas e outros objetos imutáveis dentro de tuplas podem ser alterados, mas suas identidades serão sempre as mesmas.
 
-Isso enfatiza a diferença entre os conceitos de identidade e valor, descritos em *Python Language Reference*, no capítulo `Data model`_::
+Isso enfatiza a diferença entre os conceitos de identidade e valor, descritos em *Python Language Reference*, no capítulo `Data model`_:
 
     Cada objeto tem uma identidade, um tipo e um valor. A identidade de um objeto nunca muda, uma vez que tenha sido criado; você pode pensar como se fosse o endereço do objeto na memória. O operador ``is`` compara a identidade de dois objetos; a função ``id()`` retorna um inteiro representando a sua identidade.
 
