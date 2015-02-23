@@ -117,7 +117,8 @@ Para fechar: sempre leia lado direito de uma atribuição primero. Ali o objeto 
 
 Em relação a tuplas, certifique-se que elas apenas contenham referências a objetos imutáveis antes de tentar usá-las como chaves em um dicionário ou itens em um ``set``.
 
-    Este texto foi baseado no capítulo 8 do meu livro `Fluent Python`_. Esse capítulo, chamado *Object references, mutability and recycling* também aborda a semântica da passagem de parâmetros para funções, melhores práticas para manipulação de parâmetros mutáveis, cópias rasas (``shallow copies``) e cópias profundas (``deep copies``), e o conceito de referências fracas (``weak references``) - além de outros tópicos. O livro foca em Python 3 mas grande parte de seu conteúdo se aplica a Python 2.7, como tudo neste texto.
+    Este texto foi originalmente publicado no `blog`_ da editora O'Reilly em inglês. A tradução para o português foi feita por Paulo Henrique Rodrigues Pinheiro. O conteúto é baseado no capítulo 8 do meu livro `Fluent Python`_. Esse capítulo, chamado *Object references, mutability and recycling* também aborda a semântica da passagem de parâmetros para funções, melhores práticas para manipulação de parâmetros mutáveis, cópias rasas (``shallow copies``) e cópias profundas (``deep copies``), e o conceito de referências fracas (``weak references``) - além de outros tópicos. O livro foca em Python 3 mas grande parte de seu conteúdo se aplica a Python 2.7, como tudo neste texto.
 
+.. _blog: http://radar.oreilly.com/2014/10/python-tuples-immutable-but-potentially-changing.html
 .. _Fluent Python: http://shop.oreilly.com/product/0636920032519.do
 .. _Data Model: https://docs.python.org/3/reference/datamodel.html#objects-values-and-types
