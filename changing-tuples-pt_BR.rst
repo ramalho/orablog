@@ -1,5 +1,5 @@
-Tuplas em Python são imutáveis mas seu valor pode mudar
-========================================================
+Tuplas mutantes em Python
+=========================
 
 Por Luciano Ramalho, autor de `Fluent Python`_
 
