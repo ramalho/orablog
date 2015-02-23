@@ -65,11 +65,7 @@ O que é imutável é o conteúdo físico de uma tupla, que armazena apenas refe
 
 Isso enfatiza a diferença entre os conceitos de identidade e valor, descritos em *Python Language Reference*, no capítulo `Data model`_::
 
-    Cada objeto tem uma identidade, um tipo e um valor. A identidade de um
-    objeto nunca muda, uma vez que tenha sido criado; você pode pensar como se
-    fosse o endereço do objeto na memória. O operador ``is`` compara a
-    identidade de dois objetos; a função ``id()`` retorna um inteiro
-    representando a sua identidade.
+    Cada objeto tem uma identidade, um tipo e um valor. A identidade de um objeto nunca muda, uma vez que tenha sido criado; você pode pensar como se fosse o endereço do objeto na memória. O operador ``is`` compara a identidade de dois objetos; a função ``id()`` retorna um inteiro representando a sua identidade.
 
 Após ``dum`` tornar-se um rapper, os irmãos gêmeos não são mais iguais::
 
@@ -113,11 +109,11 @@ Agora vamos instanciar outro ``Gizmo`` e imediatamente tentar executar uma opera
 
 Este trecho mostra que o novo objeto foi instanciado (sua identidade é ``4328764360``) mas antes que o nome ``y`` possa ser criado, uma exceção ``TypeError`` abortou a atribuição. A verificação ``'y' in globals()`` prova que não existe o nome global ``y``.
 
-Para fechar: sempre leia lado direito de uma atribuição primero. Ali o objeto é computado ou retornado. Depois disso, o nome no lado esquerdo é atrelado ao objeto, como uma etiqueta afixada nele. Apenas esqueça aquela idéia de variáveis como caixas.
+Para fechar: sempre leia lado direito de uma atribuição primero. Ali o objeto é computado ou retornado. Depois disso, o nome no lado esquerdo é vinculado ao objeto, como uma etiqueta afixada nele. Apenas esqueça aquela idéia de variáveis como caixas.
 
 Em relação a tuplas, certifique-se que elas apenas contenham referências a objetos imutáveis antes de tentar usá-las como chaves em um dicionário ou itens em um ``set``.
 
-    Este texto foi originalmente publicado no `blog`_ da editora O'Reilly em inglês. A tradução para o português foi feita por Paulo Henrique Rodrigues Pinheiro. O conteúto é baseado no capítulo 8 do meu livro `Fluent Python`_. Esse capítulo, chamado *Object references, mutability and recycling* também aborda a semântica da passagem de parâmetros para funções, melhores práticas para manipulação de parâmetros mutáveis, cópias rasas (``shallow copies``) e cópias profundas (``deep copies``), e o conceito de referências fracas (``weak references``) - além de outros tópicos. O livro foca em Python 3 mas grande parte de seu conteúdo se aplica a Python 2.7, como tudo neste texto.
+    Este texto foi originalmente publicado no `blog`_ da editora O'Reilly em inglês. A tradução para o português foi feita por Paulo Henrique Rodrigues Pinheiro. O conteúto é baseado no capítulo 8 do meu livro `Fluent Python`_. Esse capítulo, intitulado *Object references, mutability and recycling* também aborda a semântica da passagem de parâmetros para funções, melhores práticas para manipulação de parâmetros mutáveis, cópias rasas (*shallow copies*) e cópias profundas (*deep copies*), e o conceito de referências fracas (*weak references*) - além de outros tópicos. O livro foca em Python 3 mas grande parte de seu conteúdo se aplica a Python 2.7, como tudo neste texto.
 
 .. _blog: http://radar.oreilly.com/2014/10/python-tuples-immutable-but-potentially-changing.html
 .. _Fluent Python: http://shop.oreilly.com/product/0636920032519.do
