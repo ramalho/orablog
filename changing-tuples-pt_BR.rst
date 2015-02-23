@@ -17,8 +17,8 @@ Tweedledum e Tweedledee são gêmeos. Do livro: “Alice soube no mesmo instante
 
 Vamos representá-los como tuplas contendo a data de nascimento e uma lista de suas habilidades::
 
-    >>> dum = ('1861-10-23', ['poesia', 'nervosinho'])
-    >>> dee = ('1861-10-23', ['poesia', 'nervosinho'])
+    >>> dum = ('1861-10-23', ['poesia', 'fingir-luta'])
+    >>> dee = ('1861-10-23', ['poesia', 'fingir-luta'])
     >>> dum == dee
     True
     >>> dum is dee
@@ -32,7 +32,7 @@ Agora, depois dos eventos testemunhados por Alice, Tweedledum decidiu ser um rap
 
     >>> t_doom = dum
     >>> t_doom
-    ('1861-10-23', ['poesia', 'nervosinho'])
+    ('1861-10-23', ['poesia', 'fingir-luta'])
     >>> t_doom == dum
     True
     >>> t_doom is dum
@@ -49,9 +49,9 @@ Depois de muito praticar, T-Doom agora é um rapper experiente. Codificando, foi
     >>> skills = t_doom[1]
     >>> skills.append('rap')
     >>> t_doom
-    ('1861-10-23', ['poesia', 'nervosinho 'rap'])
+    ('1861-10-23', ['poesia', 'fingir-luta 'rap'])
     >>> dum
-    ('1861-10-23', ['poesia', 'nervosinho 'rap'])
+    ('1861-10-23', ['poesia', 'fingir-luta 'rap'])
 
 T-Doom conquistou a habilidade ``rap``, e também Tweedledum — óbvio, pois eles são um e o mesmo. Se ``t_doom`` fosse uma caixa contendo dados do tipo ``str`` e ``list``, como você poderia explicar que uma inclusão à lista ``t_doom`` também altera a lista na caixa ``dum``?  Contudo, é perfeitamente plausível se você entende variáveis como etiquetas.
 
