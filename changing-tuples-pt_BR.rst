@@ -5,7 +5,7 @@ Por Luciano Ramalho, autor de `Fluent Python`_
 
 Tuplas em Python têm uma característica surpreendente: elas são imutáveis, mas seus valores podem mudar. Isso pode acontecer quando uma ``tupla`` contém uma referência para qualquer objeto mutável, como uma ``lista``. Se você precisar explicar isso a um colega iniciando com Python, um bom começo é destruir o senso comum sobre variáveis serem como caixas em que armazenamos dados.
 
-Em 1997 participei de um curso de verão sobre Java no MIT. O professor, Lynn Andrea Stein - uma premiada educadora de ciência da computação - enfatizou que a habitual metáfora de "variáveis como caixas" acaba atrapalhando o entendimento sobre variáveis de referência em linguagens OO. Variáveis em Python são como variáveis de referência em Java, portanto é melhor pensar nelas como etiquetas afixadas em objetos.
+Em 1997 participei de um curso de verão sobre Java no MIT. A professora, Lynn Andrea Stein - uma premiada educadora de ciência da computação - enfatizou que a habitual metáfora de "variáveis como caixas" acaba atrapalhando o entendimento sobre variáveis de referência em linguagens OO. Variáveis em Python são como variáveis de referência em Java, portanto é melhor pensar nelas como etiquetas afixadas em objetos.
 
 Eis um exemplo inspirado no livro *Alice Através do Espelho e O Que Ela Encontrou Por Lá*, de Lewis Carroll.
 
