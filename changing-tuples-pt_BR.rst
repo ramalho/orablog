@@ -26,7 +26,7 @@ Vamos representá-los como tuplas contendo a data de nascimento e uma lista de s
     >>> id(dum), id(dee)
     (4313018120, 4312991048)
 
-É claro que ``dum`` e ``dee`` referem-se a objetos que são iguais, mas que não são o mesmo objeto. Eles tem identificadores diferentes.
+É claro que ``dum`` e ``dee`` referem-se a objetos que são iguais, mas que não são o mesmo objeto. Eles tem identidades diferentes.
 
 Agora, depois dos eventos testemunhados por Alice, Tweedledum decidiu ser um rapper, adotando o nome artístico T-Doom. Podemos expressar isso em Python dessa forma::
 
@@ -61,15 +61,15 @@ Abaixo está uma ilustração alternativa dos objetos que representam Tweedledum
 
 .. image:: diagrams/dum-skills-references.png
 
-Imutável é o conteúdo físico de uma tupla, que contém apenas referências a objetos. O valor da lista referenciado por ``dum[1]`` mudou, mas o identificador do objeto referenciado permanece o mesmo. Uma tupla não tem meios de prevenir mudanças nos valores de seus itens, que são objetos independentes e podem ser encontrados através de referências fora da tupla, como o nome ``skills`` que nós usamos anteriormente. Listas e outros objetos imutáveis dentro de tuplas podem ser alterados, mas seus identificadores serão sempre os mesmos.
+Imutável é o conteúdo físico de uma tupla, que contém apenas referências a objetos. O valor da lista referenciado por ``dum[1]`` mudou, mas a identidade do objeto referenciado permanece a mesma. Uma tupla não tem meios de prevenir mudanças nos valores de seus itens, que são objetos independentes e podem ser encontrados através de referências fora da tupla, como o nome ``skills`` que nós usamos anteriormente. Listas e outros objetos imutáveis dentro de tuplas podem ser alterados, mas suas identidades serão sempre as mesmas.
 
 Isso enfatiza a diferença entre os conceitos de identidade e valor, descritos em *Python Language Reference*, no capítulo `Data model`_::
 
-    Cada objeto tem um identificador, um tipo e um valor. A identificação de um
+    Cada objeto tem uma identidade, um tipo e um valor. A identidade de um
     objeto nunca muda, uma vez que tenha sido criado; você pode pensar como se
-    fosse o endereço do objeto na memória. O operador ‘is’ compara o
-    identificador de dois objetos; a função id() retorna um inteiro
-    representando o seu identificador.
+    fosse o endereço do objeto na memória. O operador ‘is’ compara a
+    identidade de dois objetos; a função id() retorna um inteiro
+    representando a sua identidade.
 
 Após ``dum`` tornar-se um rapper, os irmãos gêmeos não são mais iguais::
 
@@ -99,7 +99,7 @@ Aqui está o código demonstrando. Primeiro nós criamos uma classe ``Gizmo``, e
     >>> x = Gizmo()
     Gizmo id: 4328764080
 
-Observe que o método ``__init__`` mostra o identificador do objeto tão logo criado. Isso será importante na próxima demonstração.
+Observe que o método ``__init__`` mostra a identidade do objeto tão logo criado. Isso será importante na próxima demonstração.
 
 Agora vamos instanciar outra ``Gizmo`` e imediatamente tentar executar uma operação com ela antes de atribuir um nome ao resultado::
 
@@ -111,7 +111,7 @@ Agora vamos instanciar outra ``Gizmo`` e imediatamente tentar executar uma opera
     >>> 'y' in globals()
     False
 
-Este trecho mostra que o novo objeto foi instanciado (seu identificador é ``4328764360``) mas antes que o nome ``y`` possa ser criado, uma exceção ``TypeError`` abortou a atribuição. A verificação ``'y' in globals()`` prova que não existe o nome global ``y``.
+Este trecho mostra que o novo objeto foi instanciado (sua identidade é ``4328764360``) mas antes que o nome ``y`` possa ser criado, uma exceção ``TypeError`` abortou a atribuição. A verificação ``'y' in globals()`` prova que não existe o nome global ``y``.
 
 Para fechar: sempre leia primeiro o lado direito de uma atribuição. Aqui o objeto é computado ou retornado. Depois disso, o nome no lado esquerdo é atrelado ao objeto, como uma etiqueta afixada nele. Apenas esqueça sobre as caixas.
 
