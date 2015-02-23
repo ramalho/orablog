@@ -1,4 +1,4 @@
-Tuplas em Python: são imutáveis mas seu valor pode mudar
+Tuplas em Python são imutáveis mas seu valor pode mudar
 ========================================================
 
 Por Luciano Ramalho, autor de `Fluent Python`_
